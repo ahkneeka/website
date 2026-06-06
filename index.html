@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anica Azad - Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#f5f5f5;
+    color:#000;
+    min-height:100vh;
+}
+
+.container{
+    width:min(95%,1400px);
+    margin:auto;
+}
+
+/* NAV */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    padding:24px 0;
+    font-size:14px;
+}
+
+nav ul{
+    display:flex;
+    gap:60px;
+    list-style:none;
+}
+
+nav a{
+    text-decoration:none;
+    color:#000;
+}
+
+/* HERO */
+
+.hero{
+    padding:20px 0 80px;
+}
+
+.hero h1{
+    font-size:clamp(4rem,12vw,10rem);
+    line-height:.9;
+    font-weight:500;
+    margin-bottom:40px;
+}
+
+.intro{
+    max-width:1000px;
+    font-size:clamp(1.2rem,2vw,2rem);
+    line-height:1.2;
+}
+
+/* MAIN SECTION */
+
+.content{
+    margin-top:60px;
+    border-top:1px solid #000;
+    padding-top:30px;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+}
+
+.section-title{
+    font-size:2.5rem;
+    font-weight:400;
+}
+
+/* ACCORDION */
+
+.accordion-item{
+    border-bottom:1px solid #000;
+}
+
+.accordion-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
+    cursor:pointer;
+}
+
+.accordion-header h3{
+    font-size:2rem;
+    font-weight:400;
+}
+
+.icon{
+    font-size:2rem;
+    transition:.3s;
+}
+
+.accordion-item.active .icon{
+    transform:rotate(45deg);
+}
+
+.accordion-content{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .4s ease;
+}
+
+.accordion-content-inner{
+    padding-bottom:25px;
+}
+
+.accordion-content p,
+.accordion-content li{
+    font-size:1.1rem;
+    line-height:1.7;
+}
+
+.accordion-content ul{
+    padding-left:20px;
+}
+
+/* FOOTER */
+
+footer{
+    margin-top:120px;
+    padding:30px 0;
+    border-top:1px solid #000;
+
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:20px;
+
+    font-size:14px;
+}
+
+footer a{
+    color:#000;
+    text-decoration:none;
+}
+
+@media (max-width:900px){
+
+    .content{
+        grid-template-columns:1fr;
+    }
+
+    .section-title{
+        font-size:2rem;
+    }
+
+    .accordion-header h3{
+        font-size:1.5rem;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <nav>
+        <a>Home</a>
+
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h1>Anica Azad</h1>
+
+        <p class="intro">
+            
+
+        </p>
+    </section>
+
+    <section class="content">
+
+        <div class="left">
+            <h2 class="section-title">
+                Explore my work
+            </h2>
+        </div>
+
+        <div class="right">
+
+            <!-- ABOUT -->
+
+            <div class="accordion-item" id="about">
+                <div class="accordion-header">
+                    <h3>About Me</h3>
+                    <span class="icon">+</span>
+                </div>
+
+                <div class="accordion-content">
+                    <div class="accordion-content-inner">
+                        <p>
+                          Anica <i>(ah-knee-ka)</i> is currently a technology consultant with a degree in Management Science and Information Systems from Trinity College Dublin. She combines a strong quantitative foundation with a people-centred approach — working across data strategy, GenAI workflows, and stakeholder research to turn complex information into decisions that actually land.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+<!-- SKILLS -->
+<div class="accordion-item" id="skills">
+    <div class="accordion-header">
+        <h3>Skills</h3>
+        <span class="icon">+</span>
+    </div>
+    <div class="accordion-content">
+        <div class="accordion-content-inner">
+
+            <div class="skill-category">
+                <h4>Analytics & Data</h4>
+                <ul>
+                    <li>Python (pandas, geopandas, plotly, TextBlob)</li>
+                    <li>R</li>
+                    <li>SQL</li>
+                    <li>Tableau</li>
+                    <li>Power BI</li>
+                    <li>Excel (Advanced)</li>
+                </ul>
+            </div>
+ <br>
+            <div class="skill-category">
+                <h4>Research & Methods</h4>
+                <ul>
+                    <li>Quantitative & Qualitative Research</li>
+                    <li>Survey Design & Statistical Analysis</li>
+                    <li>Statistical Modelling (GLM, PCA)</li>
+                    <li>Competitive Benchmarking</li>
+                    <li>UX Research Methods</li>
+                    <li>Storytelling with Data</li>
+                </ul>
+            </div>
+ <br>
+            <div class="skill-category">
+                <h4>AI & Emerging Tech</h4>
+                <ul>
+                    <li>GenAI / LLM Workflows</li>
+                    <li>NLP</li>
+                    <li>Prompt Engineering</li>
+                    <li>Workflow Automation</li>
+                </ul>
+            </div>
+ <br>
+            <div class="skill-category">
+                <h4>Delivery & Frameworks</h4>
+                <ul>
+                    <li>Agile / Scrum (PSM I Certified)</li>
+                    <li>BCS Business Analysis</li>
+                    <li>PMO & Stakeholder Management</li>
+                    <li>Dashboard Design & KPI Development</li>
+                </ul>
+            </div>
+ <br>
+            <div class="skill-category">
+                <h4>Other Technical</h4>
+                <ul>
+                    <li>HTML & CSS</li>
+                    <li>Git</li>
+                    <li>Java</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+            <!-- EXPERIENCE -->
+<div class="accordion-item" id="experience">
+    <div class="accordion-header">
+        <h3>Experience</h3>
+        <span class="icon">+</span>
+    </div>
+    <div class="accordion-content">
+        <div class="accordion-content-inner">
+
+            <p>
+                <strong>Technology, Data & AI Consultant</strong><br>
+                PwC Ireland · September 2025 – Present
+            </p>
+            <p>
+                <em>Commercial Strategy — Multi-Hundred-Million-Euro Technology Framework</em>
+            </p>
+            <ul>
+                <li>Developed advanced scenario-modelling tools in Excel and Python to analyse cost structures and pricing dynamics, informing senior leadership decisions on a multi-hundred-million-euro technology procurement.</li>
+                <li>Conducted quantitative market scans and competitive benchmarking, synthesising large volumes of unstructured data to shape go-to-market positioning and bid narratives.</li>
+                <li>Collaborated with engagement managers to stress-test technical and commercial trade-offs, ensuring proposals were analytically rigorous and commercially compelling.</li>
+            </ul>
+            <p>
+                <em>PMO Support — National Healthcare Technology Implementation</em>
+            </p>
+            <ul>
+                <li>Designed and implemented GenAI workflows using LLMs to automate synthesis of unstructured project documentation and meeting transcripts, reducing manual review time and accelerating cross-team decision-making.</li>
+                <li>Operated in a regulated, high-stakes environment tracking dependencies and risks across multiple workstreams with tight delivery deadlines.</li>
+                <li>Translated complex stakeholder requirements into structured handoff artefacts, bridging technical and business teams under pressure.</li>
+            </ul>
+
+            <br>
+
+            <p>
+                <strong>People & Data Systems Analyst</strong><br>
+                TYFuture · August 2024 – April 2025
+            </p>
+            <ul>
+                <li>Designed and deployed interactive Tableau and Power BI dashboards, replacing manual reporting with scalable self-service analytics tools enabling real-time performance tracking.</li>
+                <li>Led technical solution discovery through comparative analysis and test simulations, evaluating data architecture options to recommend optimal frameworks for social impact analytics.</li>
+                <li>Developed research-based survey instruments and conducted statistical analysis on respondent data to scope requirements for a social impact platform, ensuring high data quality and actionable insights for product development.</li>
+                <li>Delivered stakeholder walkthroughs, training sessions, and handover documentation to ensure confident adoption of data tools across teams.</li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+         <!-- PROJECTS -->
+<div class="accordion-item" id="projects">
+    <div class="accordion-header">
+        <h3>Projects</h3>
+        <span class="icon">+</span>
+    </div>
+    <div class="accordion-content">
+        <div class="accordion-content-inner">
+
+            <p>
+                <strong>Driver Licensing Efficiency — Data Analytics Platform</strong><br>
+                End-to-end analytics platform integrating public datasets (CSO, RSA) and geospatial 
+                shapefiles to identify regional inefficiencies in Ireland's national driving test system. 
+                Built with Python (plotly, ipywidgets, geopandas), featuring a composite performance 
+                rating algorithm (GLM, PCA) and an interactive policy simulation dashboard.
+            </p>
+
+            <br>
+
+            <p>
+                <strong>FaceScope — Zodiac Sign Prediction from Facial Features</strong><br>
+                Machine learning project predicting zodiac signs from facial feature analysis.
+                <a href="https://github.com/ahkneeka/FaceScope-Zodiac-Sign-Prediction-from-Facial-Features"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    View on GitHub ↗
+                </a>
+            </p>
+
+            <br>
+
+           
+
+        </div>
+    </div>
+</div>
+
+    </section>
+
+    <footer>
+        <span>Anica Azad</span>
+        <a href="https://www.linkedin.com/in/anica-azad-960671172/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/ahkneeka" target="_blank">GitHub</a>
+    </footer>
+
+</div>
+
+<script>
+const items = document.querySelectorAll(".accordion-item");
+
+items.forEach(item => {
+
+    const header = item.querySelector(".accordion-header");
+
+    header.addEventListener("click", () => {
+
+        item.classList.toggle("active");
+
+        const content = item.querySelector(".accordion-content");
+
+        if(content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight =
+                content.scrollHeight + "px";
+        }
+
+    });
+
+});
+</script>
+
+</body>
+</html>
