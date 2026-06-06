@@ -1,1 +1,1 @@
-# very basic website
+# a very basic website
