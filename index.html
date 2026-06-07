@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Anica Azad - Portfolio</title>
+<title>Anica Azad</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -49,21 +49,23 @@ nav a{
 
 /* HERO */
 
-.hero{
-    padding:20px 0 80px;
+.hero {
+    padding: 20px 0 80px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
 }
 
-.hero h1{
-    font-size:clamp(4rem,12vw,10rem);
-    line-height:.9;
-    font-weight:500;
-    margin-bottom:40px;
+.hero h1 {
+    font-size: clamp(4rem, 12vw, 10rem);
+    line-height: .9;
+    font-weight: 500;
+    flex-shrink: 0; /* prevents name from squishing */
 }
 
-.intro{
-    max-width:1000px;
-    font-size:clamp(1.2rem,2vw,2rem);
-    line-height:1.2;
+.hero-gif {
+    width: min(40vw, 500px);
+    height: auto;
 }
 
 /* MAIN SECTION */
@@ -172,23 +174,26 @@ footer a{
 <div class="container">
 
     <nav>
-        <a>Home</a> 
+        <span>I am</span>
+
+        <ul>
+           	<li>Analytical</li>
+        	<li>Curious</li>
+        	<li>People-centred</li>
+        	<li>Detail-oriented</li>
+        </ul>
     </nav>
 
     <section class="hero">
-        <h1>Anica Azad</h1>
-
-        <p class="intro">
-            
-
-        </p>
+        <h1>Anica Azad</h1> 
+	<img src="C:\Users\Anica\Downloads\hero banner.gif" alt="Animated flowers" class="hero-gif">
     </section>
 
     <section class="content">
 
         <div class="left">
             <h2 class="section-title">
-                Click and Explore!!
+                Get to know me!
             </h2>
         </div>
 
@@ -259,7 +264,7 @@ footer a{
                 <h4>Delivery & Frameworks</h4>
                 <ul>
                     <li>Agile / Scrum (PSM I Certified)</li>
-                    <li>BCS Foundation in Business Analysis</li>
+                    <li>BCS Business Analysis</li>
                     <li>PMO & Stakeholder Management</li>
                     <li>Dashboard Design & KPI Development</li>
                 </ul>
@@ -299,6 +304,7 @@ footer a{
                 <li>Collaborated with engagement managers to stress-test technical and commercial trade-offs, ensuring proposals were analytically rigorous and commercially compelling.</li>
             </ul>
             <p>
+<br>
                 <em>PMO Support — National Healthcare Technology Implementation</em>
             </p>
             <ul>
@@ -311,7 +317,7 @@ footer a{
 
             <p>
                 <strong>People & Data Systems Analyst</strong><br>
-                TYFuture x Trinity College Dublin Capstone Project· August 2024 – April 2025
+                TYFuture · August 2024 – April 2025
             </p>
             <ul>
                 <li>Designed and deployed interactive Tableau and Power BI dashboards, replacing manual reporting with scalable self-service analytics tools enabling real-time performance tracking.</li>
@@ -364,7 +370,6 @@ footer a{
     </section>
 
     <footer>
-        <span>Anica Azad</span>
         <a href="https://www.linkedin.com/in/anica-azad-960671172/" target="_blank">LinkedIn</a>
         <a href="https://github.com/ahkneeka" target="_blank">GitHub</a>
     </footer>
